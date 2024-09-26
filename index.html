@@ -1,13 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 5</title>
+    <!-- Daisy ui cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'button-bg': 'rgb(171, 239, 95)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .lexend {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .navbar {
+            transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+        }
+    </style>
+
 </head>
-<body>
-    <header>
-        <h1>Donate Bangladesh</h1>
+
+<body class="lexend ">
+
+    <header id="navbar" class="sticky top-0 bg-opacity-80 z-10">
+        <!-- Navbar -->
+        <nav class="navbar bg-amber-50 shadow-md py-5 px-4 sm:px-8 lg:px-28 flex justify-between items-center">
+            <!-- Left Button (Blog) -->
+            <div class="flex-none">
+                <button class="btn bg-[#B4F461] px-4 sm:px-6 lg:px-8 text-lg sm:text-xl font-bold">Blog</button>
+            </div>
+
+            <!-- Center Logo and Title -->
+            <div class="flex flex-1 justify-center items-center">
+                <div>
+                    <img src="assets/logo.png" alt="Logo" class="h-8 sm:h-10">
+                </div>
+                <p class="ml-3 text-lg sm:text-xl font-bold">Donate Bangladesh</p>
+            </div>
+
+            <!-- Right Section (Coin and Amount) -->
+            <div class="flex items-center">
+                <div>
+                    <img src="assets/coin.png" alt="Coin" class="h-6 sm:h-8">
+                </div>
+                <div class="ml-2 text-lg sm:text-xl font-bold">5500 BDT</div>
+            </div>
+        </nav>
+
+        <!-- Buttons Below the Navbar -->
+        <div class="flex justify-center mt-5 space-x-4">
+            <button class="btn bg-[#B4F461] px-4 sm:px-8 text-lg sm:text-xl font-bold">Donation</button>
+            <button class="btn bg-[#B4F461] px-4 sm:px-8 text-lg sm:text-xl font-bold">History</button>
+        </div>
     </header>
+
+    <main>
+
+        <!-- card 1  -->
+        <section class="mt-8">
+            <div class="card card-side bg-base-100 border w-auto h-auto mx-4 sm:mx-12 lg:mx-24 flex flex-col md:flex-row items-center">
+                <!-- image 1 -->
+                <img class="w-full md:w-[330px] h-auto ml-4 mb-4 md:mb-0" src="assets/noakhali.png" alt="">
+
+                <div>
+                    <div class="card-body">
+                        <div class="flex items-center space-x-2 bg-gray-100 p-2 rounded-lg shadow-sm w-28">
+                            <!-- Coin Icon -->
+                            <img src="assets/coin.png" alt="Coin Icon" class="w-6 h-6">
+                            <!-- Text Display -->
+                            <div id="add-amount-noakali" class="text-gray-700 text-sm font-medium">0 BDT</div>
+                        </div>
+
+                        <h2 class="card-title text-xl font-semibold">Donate for Flood at Noakhali, Bangladesh</h2>
+                        <p class="text-sm font-normal text-[#111111B3] leading-normal">
+                            The coastal district of Noakhali has recently been devastated by severe flooding, leaving
+                            thousands of families displaced and in urgent need of support. Homes have been submerged,
+                            crops destroyed, and essential infrastructure severely damaged.
+                        </p>
+
+                        <div>
+                            <input type="number" name="donation-amount" id="donation-amount" class="input input-bordered w-full pl-4 pr-12 sm:text-sm" placeholder="Write Donation Amount" min="0">
+                        </div>
+                        <div>
+                            <button id="btn-donation" class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold w-full">Donate Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- card 2  -->
+        <section class="mt-8">
+            <div class="card card-side bg-base-100 border w-auto h-auto mx-4 sm:mx-12 lg:mx-24 flex flex-col md:flex-row items-center">
+                <!-- image 1 -->
+                <img class="w-full md:w-[330px] h-auto ml-4 mb-4 md:mb-0" src="assets/feni.png" alt="">
+
+                <div class="card-body">
+                    <div class="flex items-center space-x-2 bg-gray-100 p-2 rounded-lg shadow-sm w-28">
+                        <!-- Coin Icon -->
+                        <img src="assets/coin.png" alt="Coin Icon" class="w-6 h-6">
+                        <!-- Text Display -->
+                        <span class="text-gray-700 text-sm font-medium">0 BDT</span>
+                    </div>
+
+                    <h2 class="card-title text-xl font-semibold">Donate for Flood Relief in Feni, Bangladesh</h2>
+                    <p class="text-sm font-normal text-[#111111B3] leading-normal">
+                        In light of the recent devastating floods in Feni, Bangladesh, we urge you to extend your support to those affected by this natural disaster.
+                    </p>
+
+                    <div>
+                        <input type="number" name="donation-amount" id="donation-amount" class="input input-bordered w-full pl-4 pr-12 sm:text-sm" placeholder="Write Donation Amount" min="0">
+                    </div>
+                    <div>
+                        <button class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold w-full">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- card 3 -->
+        <section class="mt-8 space-y-4">
+            <div class="card card-side bg-base-100 border w-auto h-auto mx-4 sm:mx-12 lg:mx-24 flex flex-col md:flex-row items-center">
+                <!-- image 1 -->
+                <img class="w-full md:w-[335px] h-auto ml-4 mb-4 md:mb-0" src="assets/quota-protest.png" alt="">
+
+                <div class="card-body">
+                    <div class="flex items-center space-x-2 bg-gray-100 p-2 rounded-lg shadow-sm w-28">
+                        <!-- Coin Icon -->
+                        <img src="assets/coin.png" alt="Coin Icon" class="w-6 h-6">
+                        <!-- Text Display -->
+                        <span class="text-gray-700 text-sm font-medium">0 BDT</span>
+                    </div>
+
+                    <h2 class="card-title text-xl font-semibold">Aid for Injured in the Quota Movement</h2>
+                    <p class="text-sm font-normal text-[#111111B3] leading-normal">
+                        The Quota Movement has sparked significant unrest, resulting in numerous injuries among peaceful protestors.
+                    </p>
+
+                    <div>
+                        <input type="number" name="donation-amount" id="donation-amount" class="input input-bordered w-full pl-4 pr-12 sm:text-sm" placeholder="Write Donation Amount" min="0">
+                    </div>
+                    <div>
+                        <button class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold w-full">Donate Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // JavaScript to add blur on scroll
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add("backdrop-blur-md", "bg-opacity-60");
+            } else {
+                navbar.classList.remove("backdrop-blur-md", "bg-opacity-60");
+            }
+        });
+    </script>
+
+    <script src="js/donation.js"></script>
 </body>
+
 </html>
