@@ -5,31 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
 
-     <!-- Daisy UI CDN -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-     <script src="https://cdn.tailwindcss.com"></script>
- 
-     <!-- Google Font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
- 
-     <!-- Font awesome Icon -->
-     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-     <script>
-         tailwind.config = {
-             theme: {
-                 extend: {
-                     colors: {
-                         clifford: '#da373d',
-                         'button-bg': 'rgb(171, 239, 95)',
-                     }
-                 }
-             }
-         }
-     </script>
-     <style>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'button-bg': 'rgb(171, 239, 95)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
         .lexend {
             font-family: "Lexend", sans-serif;
             font-optical-sizing: auto;
@@ -44,9 +44,9 @@
 <body class="lexend">
     <header id="navbar" class="sticky top-0 bg-opacity-80 z-10">
         <!-- Navbar -->
-        <nav class="navbar bg-amber-50 shadow-md py-5 px-6 sm:px-28 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+        <nav class="navbar bg-amber-50 shadow-md py-5 px-4 sm:px-28 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <div class="flex-none">
-                <button id="home" class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold">Home</button>
+                <button id="home" class="btn bg-[#B4F461] px-4 sm:px-8 text-lg sm:text-xl font-bold">Home</button>
             </div>
 
             <div class="flex flex-col sm:flex-row flex-1 justify-center items-center sm:space-x-3">
@@ -61,26 +61,25 @@
                 <div id="available-donation" class="text-lg sm:text-xl font-bold">5500 BDT</div>
             </div>
         </nav>
-       
-       
-        <section class="mt-20 ml-20 mr-20">
-            <div>
-                <h1 class="text-3xl font-extrabold">Important FAQ <i class="fa-solid fa-question"></i></h1>
-            </div>
-               
-           
-            <div class="join join-vertical w-full mt-10">
-                <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" checked="checked" />
-                  <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
-                  <div class="collapse-content">
+    </header>
+
+    <section class="mt-10 mx-4 sm:mx-20">
+        <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold">Important FAQ <i class="fa-solid fa-question"></i></h1>
+        </div>
+
+        <div class="join join-vertical w-full mt-8">
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" checked="checked" />
+                <div class="collapse-title text-lg sm:text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                <div class="collapse-content">
                     <p>DOM refers to using HTML document make object and make model using Javascript.</p>
-                  </div>
                 </div>
-                <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">How do you select an element from DOM?</div>
-                  <div class="collapse-content">
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg sm:text-xl font-medium">How do you select an element from DOM?</div>
+                <div class="collapse-content">
                     <p>Using getElementById: The getElementById method allows you to select an element by its ID. ...
                         Using getElementsByClassName: ...
                         Using getElementsByTagName: ...
@@ -89,31 +88,29 @@
                         Changing the Text Content. ...
                         Changing the HTML Content. ...
                         Changing the Attribute Value.</p>
-                  </div>
                 </div>
-                <div class="collapse collapse-arrow join-item border-base-300 border">
-                  <input type="radio" name="my-accordion-4" />
-                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,and why it is useful?</div>
-                  <div class="collapse-content">
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg sm:text-xl font-medium">What is event delegation in the context of the DOM,and why is it useful?</div>
+                <div class="collapse-content">
                     <p>Event delegation is a technique in JavaScript where you attach a single event listener to a parent element to manage events for multiple child elements, rather than attaching event listeners to each individual child. This is especially useful in scenarios where child elements are dynamically added or removed from the DOM.  <br> <br> Event delegation is useful because it improves performance by reducing the number of event listeners needed in the DOM. Instead of attaching a listener to each child element, you attach one to a common parent. This also simplifies handling dynamically added elements, as the single parent listener will automatically capture events from new children, making the code more efficient and easier to maintain.</p>
-                  </div>
                 </div>
-                <div class="collapse collapse-arrow join-item border-base-300 border">
-                    <input type="radio" name="my-accordion-4" />
-                    <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and styles using the DOM?</div>
-                    <div class="collapse-content">
-                      <p>
-                        You can manipulate an element's attributes and styles using the DOM by leveraging built-in methods and properties in JavaScript. To modify attributes, you can use methods like setAttribute() to add or change an attribute, getAttribute() to retrieve its value, and removeAttribute() to remove it. For styling, the style property allows direct manipulation of inline CSS, such as setting element.style.backgroundColor or other styles dynamically. You can also control CSS classes using classList methods, such as add(), remove(), and toggle(), making it easier to apply or modify styles through CSS classes.</p>
-                    </div>
-                  </div>
-              </div>
-    
-        </section>
-        <script>
-            document.getElementById('home').addEventListener('click',function(){
-        
-        window.location.href = 'index.html';
-    })
-        </script>
+            </div>
+            <div class="collapse collapse-arrow join-item border-base-300 border">
+                <input type="radio" name="my-accordion-4" />
+                <div class="collapse-title text-lg sm:text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                    <p>You can manipulate an element's attributes and styles using the DOM by leveraging built-in methods and properties in JavaScript. To modify attributes, you can use methods like setAttribute() to add or change an attribute, getAttribute() to retrieve its value, and removeAttribute() to remove it. For styling, the style property allows direct manipulation of inline CSS, such as setting element.style.backgroundColor or other styles dynamically. You can also control CSS classes using classList methods, such as add(), remove(), and toggle(), making it easier to apply or modify styles through CSS classes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById('home').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>
