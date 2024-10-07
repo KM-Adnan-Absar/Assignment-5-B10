@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+      <!-- Daisy UI CDN -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+  
+      <!-- Google Font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  
+      <script>
+          tailwind.config = {
+              theme: {
+                  extend: {
+                      colors: {
+                          clifford: '#da373d',
+                          'button-bg': 'rgb(171, 239, 95)',
+                      }
+                  }
+              }
+          }
+      </script>
+  
+      <style>
+          .lexend {
+              font-family: "Lexend", sans-serif;
+              font-optical-sizing: auto;
+              font-style: normal;
+          }
+  
+          .navbar {
+              transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+          }
+  
+          .modal {
+              display: none;
+          }
+  
+          .modal-open {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+          }
+  
+          .hidden {
+      display: none;
+  }
+  #btn-donation:hover,
+#btn-history:hover {
+    background-color: #b4f461 !important; /* Maintaining the green color during hover */
+}
+
+#btn-donation.active,
+        #btn-history.active {
+            background-color: rgb(180, 244, 97) !important; /* Green for active */
+        }
+
+        #btn-donation.inactive {
+            background-color: gainsboro !important; /* Gray for inactive */
+        }
+
+</style>
+</head>
+<body>
+    <header id="navbar" class="sticky top-0 bg-opacity-80 z-10">
+        <!-- Navbar -->
+        <nav class="navbar bg-amber-50 shadow-md py-5 px-6 sm:px-28 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div class="flex-none">
+                <button class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold">Blog</button>
+            </div>
+
+            <div class="flex flex-col sm:flex-row flex-1 justify-center items-center sm:space-x-3">
+                <div>
+                    <img src="assets/logo.png" alt="Logo" class="h-8 sm:h-10">
+                </div>
+                <p class="text-lg sm:text-xl font-bold mt-2 sm:mt-0">Donate Bangladesh</p>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <img src="assets/coin.png" alt="Coin" class="h-6 sm:h-8">
+                <div id="available-donation" class="text-lg sm:text-xl font-bold">5500 BDT</div>
+            </div>
+        </nav>
+
+        <div class="flex justify-center mt-16 space-x-4">
+            <button id="btn-donation" class="btn inactive bg-[#B4F461]  px-6 sm:px-8 text-lg sm:text-xl text-black  font-bold active">Donation</button>
+            <button id="btn-history" class="btn active bg-[#B4F461] px-6 sm:px-8 text-lg sm:text-xl text-black font-bold">History</button>
+        </div>
+    </header>
+   <main>
+    <section class="mt-8">
+        <div class="flex justify-center">
+            <div class="w-full max-w-4xl">
+               
+    
+                <div class="space-y-4">
+                    <!-- Card 1 -->
+                    <div class="border border-gray-300 rounded-lg p-4 shadow-lg">
+                      
+                    </div>
+    
+                    <!-- Card 2 -->
+                    <div class="border border-gray-300 rounded-lg p-4 shadow-lg">
+                
+                    </div>
+    
+                    <!-- Card 3 -->
+                    <div class="border border-gray-300 rounded-lg p-4 shadow-lg">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+       </main>
+
+
+    
+    <script src="utilities.js"></script>
+    <script src="js/history.js"></script>
+   <script src="js/donation.js"></script>
+    
+</body>
+</html>
