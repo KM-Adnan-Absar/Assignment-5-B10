@@ -77,7 +77,7 @@
         <!-- Navbar -->
         <nav class="navbar bg-amber-50 shadow-md py-5 px-6 sm:px-28 flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <div class="flex-none">
-                <button class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold">Blog</button>
+                <button id="blog" class="btn bg-[#B4F461] px-8 text-lg sm:text-xl font-bold">Blog</button>
             </div>
 
             <div class="flex flex-col sm:flex-row flex-1 justify-center items-center sm:space-x-3">
@@ -187,8 +187,12 @@
             }
         });
 
-
+        document.getElementById('blog').addEventListener('click',function(){
+        
+         window.location.href = 'blog.html';
+        })
 </script>
+
 </body>
 
 </html>
